@@ -16,10 +16,10 @@
                $fecha=strftime("%Y %B %A %H:%M");;
                $horainic=strftime("%H:%M");
                $horafin="6:05 PM";
-               $puntaje="";
+               $puntaje=0;
                 
-                $sql = "INSERT INTO lista_cotejo(codlistcot,descrip,numpregunt,fecha,horainic,horafin,puntaje)
-                                    VALUES($codlistcot,'$descrip',$numpregunt,'$fecha','$horainic','$horafin',$puntaje)";
+                $sql = "INSERT INTO lista_cotejo(descrip,numpregunt,fecha,horainic,horafin,puntaje)
+                                    VALUES('$descrip',$numpregunt,'$fecha','$horainic','$horafin',$puntaje)";
                 
                 if($conexion->query($sql) === true){
                     
